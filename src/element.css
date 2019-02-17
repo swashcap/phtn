@@ -1,0 +1,29 @@
+/** Background */
+.bga {
+  background-color: var(--accent);
+.bgb {
+  background-color: var(--black);
+}
+.bgg {
+  background-color: var(--gray);
+}
+.bgw {
+  background-color: var(--white);
+}
+
+/** Border */
+.br {
+  border-radius: var(--border-radius);
+}
+
+/** Display */
+.dib {
+  display: inline-block;
+}
+.db {
+  display: block;
+}
+.di {
+  display: inline;
+}
+

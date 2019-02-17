@@ -1,0 +1,90 @@
+/** Text: font, decoration, etc. */
+
+/** Color */
+.ca {
+  color: var(--accent);
+.cb {
+  color: var(--black);
+}
+.cg {
+  color: var(--gray);
+}
+.cw {
+  color: var(--white);
+}
+
+/** Font size */
+.f1 {
+  font-size: 1em;
+  line-height: calc(2 * var(--spacing));
+}
+.f2 {
+  font-size: 1.5em;
+  line-height: calc(3 * var(--spacing));
+}
+.f3 {
+  font-size: 2em;
+  line-height: calc(3 * var(--spacing));
+}
+.f4 {
+  font-size: 2.5em;
+  line-height: var(4 * var(--spacing));
+}
+
+/** Font style */
+.fsn {
+  font-style: normal;
+}
+.fsi {
+  font-style: italic;
+}
+
+/** Font weight */
+.fw1 {
+  font-weight: 100;
+}
+.fw2 {
+  font-weight: 200;
+}
+.fw3 {
+  font-weight: 300;
+}
+.fw4,
+.fwr {
+  font-weight: 400;
+}
+.fw5 {
+  font-weight: 500;
+}
+.fw6 {
+  font-weight: 600;
+}
+.fw7,
+.fwb {
+  font-weight: 700;
+}
+.fw8 {
+  font-weight: 800;
+}
+.fw9 {
+  font-weight: 900;
+}
+
+/** Text align */
+.tal {
+  text-align: left;
+}
+.tac {
+  text-align: center;
+}
+.tar {
+  text-align: right;
+}
+
+/** Text decoration */
+.tu0 {
+  text-decoration: none;
+}
+.tu {
+  text-decoration: underline;
+}

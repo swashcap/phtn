@@ -1,0 +1,26 @@
+/** Float */
+.clear {
+  clear: both;
+}
+.clearfix {
+}
+.clearr {
+  clear: right;
+}
+.clearl {
+  clear: left;
+}
+
+/** Flex */
+.flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}

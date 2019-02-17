@@ -1,0 +1,10 @@
+/** Variables */
+
+:root {
+  --accent: #16e;
+  --black: #000;
+  --border-radius: .25rem;
+  --gray: #666;
+  --spacing: .75rem;
+  --white: #fff;
+}

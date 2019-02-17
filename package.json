@@ -5,5 +5,8 @@
   "main": "dist/phtn.css",
   "repository": "https://github.com/swashcap/phtn.git",
   "author": "Cory Reed <swashcap@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "csso-cli": "^2.0.2"
+  }
 }

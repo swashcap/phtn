@@ -1,0 +1,9 @@
+{
+  "name": "phtn",
+  "version": "1.0.0",
+  "description": "A hastily composed library of utility CSS classes",
+  "main": "dist/phtn.css",
+  "repository": "https://github.com/swashcap/phtn.git",
+  "author": "Cory Reed <swashcap@gmail.com>",
+  "license": "MIT"
+}

@@ -7,6 +7,12 @@
   "author": "Cory Reed <swashcap@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "csso-cli": "^2.0.2"
+    "csso-cli": "^2.0.2",
+    "prettier": "^1.16.4"
+  },
+  "scripts": {
+    "build": "./scripts/build.sh",
+    "clean": "rm -rf dist",
+    "format": "prettier --write src/*.css"
   }
 }

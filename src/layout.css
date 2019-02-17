@@ -24,3 +24,12 @@
 .flex-wrap {
   flex-wrap: wrap;
 }
+.fje {
+  justify-content: flex-end;
+}
+.fjc {
+  justify-content: flex-center;
+}
+.fjs {
+  justify-content: space-between;
+}

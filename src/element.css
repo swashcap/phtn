@@ -27,4 +27,6 @@
 .di {
   display: inline;
 }
-
+.dn {
+  display: none;
+}

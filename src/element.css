@@ -1,6 +1,7 @@
 /** Background */
 .bga {
   background-color: var(--accent);
+}
 .bgb {
   background-color: var(--black);
 }

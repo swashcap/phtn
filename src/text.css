@@ -3,6 +3,7 @@
 /** Color */
 .ca {
   color: var(--accent);
+}
 .cb {
   color: var(--black);
 }

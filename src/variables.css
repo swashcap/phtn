@@ -3,8 +3,8 @@
 :root {
   --accent: #16e;
   --black: #000;
-  --border-radius: .25rem;
+  --border-radius: 0.25rem;
   --gray: #666;
-  --spacing: .75rem;
+  --spacing: 0.75rem;
   --white: #fff;
 }

@@ -7,8 +7,8 @@ cat << EOF > dist/phtn.css
 /**
  * phtn: A hastily composed library of utility CSS classes.
  * 
- * Version: __PHTN_VERSION__
- * Published: __PHTN_PUBLISHED__
+ * Version: $(node -pe "require('./package.json').version")
+ * Published: $(date -u +"%Y-%m-%dT%H:%M:%SZ")
  *
  * Homepage: https://github.com/swashcap/phtn
  * License: MIT (https://github.com/swashcap/phtn/blob/master/LICENSE)

@@ -2,5 +2,9 @@
   "{*.js,src/*.css}": [
     "yarn format",
     "git add"
+  ],
+  "scripts/**/*.sh": [
+    "shellcheck",
+    "git add"
   ]
 }

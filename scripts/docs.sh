@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -eo pipefail
 
 node_modules/.bin/kss --css kss-assets/phtn.min.css --destination docs \

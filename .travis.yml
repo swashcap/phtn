@@ -1,7 +1,4 @@
 cache: yarn
-after_deploy:
-  - ./scripts/after-deploy.sh
-
 # semantic-release
 # https://github.com/semantic-release/semantic-release/blob/master/docs/recipes/travis.md
 jobs:
@@ -17,6 +14,8 @@ language: node_js
 node_js:
   - 10.15
 script:
+  # https://conventional-changelog.github.io/commitlint/#/guides-ci-setup
+  - commitlint-travis
   # TODO: Replace with CSS linting/regression testing
   - yarn format
   - yarn build

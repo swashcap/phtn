@@ -1,0 +1,21 @@
+cache: yarn
+after_deploy:
+  - ./scripts/after-deploy.sh
+
+# semantic-release
+# https://github.com/semantic-release/semantic-release/blob/master/docs/recipes/travis.md
+jobs:
+  include:
+    - stage: release
+      node_js: lts/*
+      deploy:
+        provider: script
+        script:
+          - yarn semantic-release
+        skip_cleanup: true
+language: node_js
+node_js:
+  - 10.15
+script:
+  - yarn prettier
+  - yarn build

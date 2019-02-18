@@ -8,7 +8,7 @@ jobs:
       deploy:
         provider: script
         script:
-          - yarn semantic-release
+          - yarn semantic-release --debug
         skip_cleanup: true
 language: node_js
 node_js:

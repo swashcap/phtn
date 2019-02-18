@@ -1,4 +1,14 @@
-/** Background */
+/**
+ * Background color
+ *
+ * Markup:
+ * <div class="bga" style="height: 100px; width: 100px"></div>
+ * <div class="bgb" style="height: 100px; width: 100px"></div>
+ * <div class="bgg" style="height: 100px; width: 100px"></div>
+ * <div class="bgw" style="height: 100px; width: 100px"></div>
+ *
+ * Styleguide Element.background
+ */
 .bga {
   background-color: var(--accent);
 }
@@ -12,12 +22,36 @@
   background-color: var(--white);
 }
 
-/** Border */
+/**
+ * Border
+ *
+ * <div class="bgg br" style="height: 100px; width: 100px"></div>
+ *
+ * Styleguide: Element.border
+ */
 .br {
   border-radius: var(--border-radius);
 }
 
-/** Display */
+/**
+ * Display
+ *
+ * Markup:
+ * <div class="dib">
+ *   <code>inline-block</code>
+ * </div>
+ * <div class="db">
+ *   <code>block</code>
+ * </div>
+ * <div class="di">
+ *   <code>inline</code>
+ * </div>
+ * <div class="dn">
+ *   <code>none</code>
+ * </div>
+ *
+ * Styleguide: Element.display
+ */
 .dib {
   display: inline-block;
 }

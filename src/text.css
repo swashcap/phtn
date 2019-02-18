@@ -1,6 +1,14 @@
-/** Text: font, decoration, etc. */
-
-/** Color */
+/**
+ * Text color
+ *
+ * Markup:
+ * <p class="ca">Sample text</p>
+ * <p class="cb">Sample text</p>
+ * <p class="cg">Sample text</p>
+ * <p class="cw">Sample text</p>
+ *
+ * Styleguide Text.color
+ */
 .ca {
   color: var(--accent);
 }
@@ -14,7 +22,17 @@
   color: var(--white);
 }
 
-/** Font size */
+/**
+ * Font size
+ *
+ * Markup:
+ * <p class="f1">Sample text</p>
+ * <p class="f2">Sample text</p>
+ * <p class="f3">Sample text</p>
+ * <p class="f4">Sample text</p>
+ *
+ * Styleguide Text.size
+ */
 .f1 {
   font-size: 1em;
   line-height: calc(2 * var(--spacing));
@@ -32,7 +50,15 @@
   line-height: var(4 * var(--spacing));
 }
 
-/** Font style */
+/**
+ * Font style
+ *
+ * Markup:
+ * <p class="fsn">Sample text</p>
+ * <p class="fsi">Sample text</p>
+ *
+ * Styleguide: Text.style
+ */
 .fsn {
   font-style: normal;
 }
@@ -40,7 +66,22 @@
   font-style: italic;
 }
 
-/** Font weight */
+/**
+ * Font weight
+ *
+ * Markup:
+ * <p class="fw1">Sample text</p>
+ * <p class="fw2">Sample text</p>
+ * <p class="fw3">Sample text</p>
+ * <p class="fw4">Sample text</p>
+ * <p class="fw5">Sample text</p>
+ * <p class="fw6">Sample text</p>
+ * <p class="fw7">Sample text</p>
+ * <p class="fw8">Sample text</p>
+ * <p class="fw9">Sample text</p>
+ *
+ * Styleguide: Text.weight
+ */
 .fw1 {
   font-weight: 100;
 }
@@ -71,7 +112,17 @@
   font-weight: 900;
 }
 
-/** Text align */
+/**
+ * Text alignment
+ *
+ * Markup:
+ * <p class="tal">Sample text</p>
+ * <p class="tac">Sample text</p>
+ * <p class="tar">Sample text</p>
+ * <p class="taj">Sample text</p>
+ *
+ * Styleguide: Text.align
+ */
 .tal {
   text-align: left;
 }
@@ -85,7 +136,15 @@
   text-align: right;
 }
 
-/** Text decoration */
+/**
+ * Text decoration
+ *
+ * Markup:
+ * <p class="td0">Sample text</p>
+ * <p> class="tdu">Sample text</p>
+ *
+ * Styleguide: Text.decoration
+ */
 .tu0 {
   text-decoration: none;
 }

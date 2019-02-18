@@ -1,4 +1,14 @@
-/** Spacing: margin, padding, etc. */
+/**
+ * Margin
+ *
+ * Markup:
+ * <div class="bgg mha" style="height: 100px; width: 100px"></div>
+ *
+ * Markup:
+ * <p class="m0">No margin</p>
+ *
+ * Styleguide: Spacing.margin
+ */
 
 .mha {
   margin-left: auto;

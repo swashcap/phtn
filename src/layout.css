@@ -1,3 +1,14 @@
+/**
+ * Float
+ *
+ * Markup:
+ * <div class="clearfix">
+ *   <div class="bgg floatl" style="height: 100px; width: 100px"></div>
+ *   <p>Sample text</p>
+ * </div>
+ *
+ * Styleguide: Layout.float
+ */
 .clear,
 .clearfix:after {
   clear: both;
@@ -20,7 +31,11 @@
   float: right;
 }
 
-/** Flex */
+/**
+ * Flexbox
+ *
+ * Styleguide: Layout.flexbox
+ */
 .flex {
   display: flex;
 }

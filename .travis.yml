@@ -1,7 +1,4 @@
 cache: yarn
-after_deploy:
-  - ./scripts/after-deploy.sh
-
 # semantic-release
 # https://github.com/semantic-release/semantic-release/blob/master/docs/recipes/travis.md
 jobs:

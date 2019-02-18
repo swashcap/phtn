@@ -1,8 +1,8 @@
 /**
  * phtn: A hastily composed library of utility CSS classes.
  * 
- * Version: 1.1.1
- * Published: 1550483934182
+ * Version: __PHTN_VERSION__
+ * Published: __PHTN_PUBLISHED__
  *
  * Homepage: https://github.com/swashcap/phtn
  * License: MIT (https://github.com/swashcap/phtn/blob/master/LICENSE)

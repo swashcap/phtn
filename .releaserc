@@ -4,6 +4,13 @@
     "@semantic-release/release-notes-generator",
     "@semantic-release/npm",
     [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "./scripts/version.sh ${nextRelease.version} ${Date.now()}",
+        "shell": "/bin/bash"
+      }
+    ],
+    [
       "@semantic-release/git",
       {
         "assets": ["dist", "docs", "package.json"],

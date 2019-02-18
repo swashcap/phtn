@@ -1,8 +1,9 @@
 #!/bin/bash
 set -exo pipefail
 
-node_modules/.bin/kss --css kss-assets/phtn.min.css --destination docs \
-  --homepage ../README.md --source src --title "phtn Documentation"
+node_modules/.bin/kss --builder=styleguide-template \
+  --css kss-assets/phtn.min.css --destination docs  --homepage ../README.md \
+  --source src --title "phtn Documentation"
 
 cp dist/phtn.min.css docs/kss-assets/
 

@@ -33,12 +33,12 @@
 .flex-wrap {
   flex-wrap: wrap;
 }
-.fje {
+.flex-je {
   justify-content: flex-end;
 }
-.fjc {
+.flex-jc {
   justify-content: flex-center;
 }
-.fjs {
+.flex-sb {
   justify-content: space-between;
 }

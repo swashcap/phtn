@@ -27,7 +27,7 @@
     "clean": "rm -rf dist docs",
     "docs": "./scripts/docs.sh",
     "format": "prettier --write src/*.css",
-    "prepublishOnly": "yarn clean && yarn build && yarn docs",
+    "prepublishOnly": "yarn clean && yarn build",
     "semantic-release": "semantic-release"
   }
 }

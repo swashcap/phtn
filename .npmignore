@@ -1,0 +1,8 @@
+.huskyrc
+.lintstagedrc
+.prettierrc
+.releaserc
+.travis.yml
+commitlint.config.js
+docs
+scripts

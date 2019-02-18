@@ -19,6 +19,7 @@
     "build": "./scripts/build.sh",
     "clean": "rm -rf dist docs",
     "docs": "./scripts/docs.sh",
-    "format": "prettier --write src/*.css"
+    "format": "prettier --write src/*.css",
+    "prepublishOnly": "yarn build && yarn docs"
   }
 }

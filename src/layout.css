@@ -1,14 +1,23 @@
-/** Float */
-.clear {
+.clear,
+.clearfix:after {
   clear: both;
 }
-.clearfix {
+.clearfix:after,
+.clearfix:before {
+  content: " ";
+  display: table;
 }
 .clearr {
   clear: right;
 }
 .clearl {
   clear: left;
+}
+.floatl {
+  float: left;
+}
+.floatr {
+  float: right;
 }
 
 /** Flex */

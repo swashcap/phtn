@@ -17,5 +17,6 @@ language: node_js
 node_js:
   - 10.15
 script:
-  - yarn prettier
+  # TODO: Replace with CSS linting/regression testing
+  - yarn format
   - yarn build

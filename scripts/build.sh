@@ -6,7 +6,7 @@ mkdir -p dist
 cat << EOF > dist/phtn.css
 /**
  * phtn: A hastily composed library of utility CSS classes.
- * v$(jq -r .version package.json)
+ * v$(node -pe "require('./package.json').version")
  *
  * Homepage: https://github.com/swashcap/phtn
  * License: MIT (https://github.com/swashcap/phtn/blob/master/LICENSE)

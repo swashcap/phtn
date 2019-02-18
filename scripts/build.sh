@@ -15,6 +15,7 @@ cat << EOF > dist/phtn.css
 
 EOF
 
-cat src/{variables,element,layout,spacing,text}.css >> dist/phtn.css
+cat src/variables.css src/element.css src/layout.css src/text.css \
+  src/spacing.css >> dist/phtn.css
 
-cat dist/phtn.css | node_modules/.bin/csso > dist/phtn.min.css
+node_modules/.bin/csso - dist/phtn.css > dist/phtn.min.css

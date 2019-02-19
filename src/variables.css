@@ -1,11 +1,21 @@
 /**
  * Variables
  *
+ * phtn relies on [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables)
+ * for configuration of a a few properties. The variables are set on `:root`,
+ * and can easily be adjusted on a global or local level.
+ *
  * ## Colors
  *
  * * `--a`, `--a2`, `--a3`: Accent colors
- * * `--b`: Black
- * * `--w`: White
+ * * `--b`: Black color
+ * * `--g`, `--g2`, `--g3`, `--g4`: Gray colors
+ * * `--w`: White color
+ *
+ * ## Measurements
+ *
+ * * `--br`: Border radius
+ * * `--s`: Spacing unit
  *
  * Styleguide Variables
  */

@@ -57,6 +57,54 @@
 /**
  * Border
  *
+ * Colored borders
+ *
+ * Styleguide Element - Border
+ */
+.ba,
+.bb,
+.bg {
+  border: 1px solid transparent;
+}
+
+/**
+ * Accent Border
+ *
+ * Markup
+ * <div class="ba">Accent</div>
+ *
+ * Styleguide Element - Border - Accent
+ */
+.ba {
+  border-color: var(--accent);
+}
+
+/**
+ * Black Border
+ *
+ * Markup
+ * <div class="bb">Black</div>
+ *
+ * Styleguide Element - Border - Black
+ */
+.bb {
+  border-color: var(--black);
+}
+
+/**
+ * Gray Border
+ *
+ * Markup
+ * <div class="bg">Gray</div>
+ *
+ * Styleguide Element - Border - Gray
+ */
+.bg {
+  border-color: var(--gray);
+}
+/**
+ * Border Radius
+ *
  * Apply a `border-radius`.
  *
  * Markup:

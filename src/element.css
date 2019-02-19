@@ -7,22 +7,30 @@
  */
 
 /**
- * Accent background
+ * Accent backgrounds
  *
  * Markup:
- * <div class="bga" style="height: 100px; width: 100px"></div>
+ * <div class="bga" style="height: 100px"></div>
+ * <div class="bga2" style="height: 100px"></div>
+ * <div class="bga3" style="height: 100px"></div>
  *
- * Styleguide Element - Background - Accent
+ * Styleguide Element - Background - Accents
  */
 .bga {
   background-color: var(--a);
+}
+.bga2 {
+  background-color: var(--a2);
+}
+.bga3 {
+  background-color: var(--a3);
 }
 
 /**
  * Black background
  *
  * Markup:
- * <div class="bgb" style="height: 100px; width: 100px"></div>
+ * <div class="bgb" style="height: 100px"></div>
  *
  * Styleguide Element - Background - Black
  */
@@ -31,22 +39,34 @@
 }
 
 /**
- * Gray background
+ * Gray backgrounds
  *
  * Markup:
- * <div class="bgg" style="height: 100px; width: 100px"></div>
+ * <div class="bgg" style="height: 100px"></div>
+ * <div class="bgg2" style="height: 100px"></div>
+ * <div class="bgg3" style="height: 100px"></div>
+ * <div class="bgg4" style="height: 100px"></div>
  *
- * Styleguide Element - Background - Gray
+ * Styleguide Element - Background - Grays
  */
 .bgg {
   background-color: var(--g);
+}
+.bgg2 {
+  background-color: var(--g2);
+}
+.bgg3 {
+  background-color: var(--g3);
+}
+.bgg4 {
+  background-color: var(--g4);
 }
 
 /**
  * White background
  *
  * Markup:
- * <div class="bgw" style="border: 1px solid; height: 100px; width: 100px"></div>
+ * <div class="bgw" style="border: 1px solid; height: 100px"></div>
  *
  * Styleguide Element - Background - White
  */

@@ -1,14 +1,28 @@
-/** Variables */
-
+/**
+ * Variables
+ *
+ * ## Colors
+ *
+ * * `--a`, `--a2`, `--a3`: Accent colors
+ * * `--b`: Black
+ * * `--w`: White
+ *
+ * Styleguide Variables
+ */
 :root {
-  /** Accent color */
-  --a: #16e;
+  /** Accent colors */
+  --a: #05a;
+  --a2: #027;
+  --a3: #004;
   /** Black color */
   --b: #000;
   /** Border radius */
   --br: 0.25rem;
-  /** Gray color */
-  --g: #666;
+  /** Gray colors */
+  --g: #555;
+  --g2: #888;
+  --g3: #bbb;
+  --g4: #eee;
   /** Spacing unit */
   --s: 0.75rem;
   /** White color */

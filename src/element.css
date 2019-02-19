@@ -15,7 +15,7 @@
  * Styleguide Element - Background - Accent
  */
 .bga {
-  background-color: var(--accent);
+  background-color: var(--a);
 }
 
 /**
@@ -27,7 +27,7 @@
  * Styleguide Element - Background - Black
  */
 .bgb {
-  background-color: var(--black);
+  background-color: var(--b);
 }
 
 /**
@@ -39,7 +39,7 @@
  * Styleguide Element - Background - Gray
  */
 .bgg {
-  background-color: var(--gray);
+  background-color: var(--g);
 }
 
 /**
@@ -51,7 +51,7 @@
  * Styleguide Element - Background - White
  */
 .bgw {
-  background-color: var(--white);
+  background-color: var(--w);
 }
 
 /**
@@ -76,7 +76,7 @@
  * Styleguide Element - Border - Accent
  */
 .ba {
-  border-color: var(--accent);
+  border-color: var(--a);
 }
 
 /**
@@ -88,7 +88,7 @@
  * Styleguide Element - Border - Black
  */
 .bb {
-  border-color: var(--black);
+  border-color: var(--b);
 }
 
 /**
@@ -100,7 +100,7 @@
  * Styleguide Element - Border - Gray
  */
 .bg {
-  border-color: var(--gray);
+  border-color: var(--g);
 }
 /**
  * Border Radius
@@ -113,7 +113,7 @@
  * Styleguide Element - Border Radius
  */
 .br {
-  border-radius: var(--border-radius);
+  border-radius: var(--br);
 }
 
 /**

@@ -59,16 +59,16 @@
  * Styleguide Text - Colors - White
  */
 .ca {
-  color: var(--accent);
+  color: var(--a);
 }
 .cb {
-  color: var(--black);
+  color: var(--b);
 }
 .cg {
-  color: var(--gray);
+  color: var(--g);
 }
 .cw {
-  color: var(--white);
+  color: var(--w);
 }
 
 /**
@@ -111,7 +111,7 @@
  */
 .f1 {
   font-size: 1em;
-  line-height: calc(2 * var(--spacing));
+  line-height: calc(2 * var(--s));
 }
 
 /**
@@ -124,7 +124,7 @@
  */
 .f2 {
   font-size: 1.315em;
-  line-height: calc(2 * var(--spacing));
+  line-height: calc(2 * var(--s));
 }
 
 /**
@@ -137,7 +137,7 @@
  */
 .f3 {
   font-size: 1.618em;
-  line-height: calc(3 * var(--spacing));
+  line-height: calc(3 * var(--s));
 }
 
 /**
@@ -150,7 +150,7 @@
  */
 .f4 {
   font-size: 2.127em;
-  line-height: calc(3 * var(--spacing));
+  line-height: calc(3 * var(--s));
 }
 
 /**
@@ -163,7 +163,7 @@
  */
 .f5 {
   font-size: 2.618em;
-  line-height: calc(4 * var(--spacing));
+  line-height: calc(4 * var(--s));
 }
 
 /**
@@ -176,7 +176,7 @@
  */
 .f6 {
   font-size: 3.442em;
-  line-height: calc(5 * var(--spacing));
+  line-height: calc(5 * var(--s));
 }
 
 /**
@@ -189,7 +189,7 @@
  */
 .f7 {
   font-size: 4.236em;
-  line-height: calc(6 * var(--spacing));
+  line-height: calc(6 * var(--s));
 }
 
 /**
@@ -202,7 +202,7 @@
  */
 .fs {
   font-size: 13px;
-  line-height: var(1.5 * var(--spacing));
+  line-height: var(1.5 * var(--s));
 }
 
 /**

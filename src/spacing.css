@@ -80,21 +80,21 @@
 .mr,
 .mh,
 .m {
-  margin-right: var(--spacing);
+  margin-right: var(--s);
 }
 .mh,
 .m {
-  margin-left: var(--spacing);
+  margin-left: var(--s);
 }
 
 .mb,
 .mv,
 .m {
-  margin-bottom: var(--spacing);
+  margin-bottom: var(--s);
 }
 .mv,
 .m {
-  margin-top: var(--spacing);
+  margin-top: var(--s);
 }
 
 /**
@@ -112,21 +112,21 @@
 .mr2,
 .mh2,
 .m2 {
-  margin-right: calc(2 * var(--spacing));
+  margin-right: calc(2 * var(--s));
 }
 .mh2,
 .m2 {
-  margin-left: calc(2 * var(--spacing));
+  margin-left: calc(2 * var(--s));
 }
 
 .mb2,
 .mv2,
 .m2 {
-  margin-bottom: calc(2 * var(--spacing));
+  margin-bottom: calc(2 * var(--s));
 }
 .mv2,
 .m2 {
-  margin-top: calc(2 * var(--spacing));
+  margin-top: calc(2 * var(--s));
 }
 
 /**
@@ -144,21 +144,21 @@
 .mr3,
 .mh3,
 .m3 {
-  margin-right: calc(3 * var(--spacing));
+  margin-right: calc(3 * var(--s));
 }
 .mh3,
 .m3 {
-  margin-left: calc(3 * var(--spacing));
+  margin-left: calc(3 * var(--s));
 }
 
 .mb3,
 .mv3,
 .m3 {
-  margin-bottom: calc(3 * var(--spacing));
+  margin-bottom: calc(3 * var(--s));
 }
 .mv3,
 .m3 {
-  margin-top: calc(3 * var(--spacing));
+  margin-top: calc(3 * var(--s));
 }
 
 /**
@@ -221,21 +221,21 @@
 .pr,
 .ph,
 .p {
-  padding-right: var(--spacing);
+  padding-right: var(--s);
 }
 .ph,
 .p {
-  padding-left: var(--spacing);
+  padding-left: var(--s);
 }
 
 .pb,
 .pv,
 .p {
-  padding-bottom: var(--spacing);
+  padding-bottom: var(--s);
 }
 .pv,
 .p {
-  padding-top: var(--spacing);
+  padding-top: var(--s);
 }
 
 /**
@@ -253,21 +253,21 @@
 .pr2,
 .ph2,
 .p2 {
-  padding-right: calc(2 * var(--spacing));
+  padding-right: calc(2 * var(--s));
 }
 .ph2,
 .p2 {
-  padding-left: calc(2 * var(--spacing));
+  padding-left: calc(2 * var(--s));
 }
 
 .pb2,
 .pv2,
 .p2 {
-  padding-bottom: calc(2 * var(--spacing));
+  padding-bottom: calc(2 * var(--s));
 }
 .pv2,
 .p2 {
-  padding-top: calc(2 * var(--spacing));
+  padding-top: calc(2 * var(--s));
 }
 
 /**
@@ -285,19 +285,19 @@
 .pr3,
 .ph3,
 .p3 {
-  padding-right: calc(3 * var(--spacing));
+  padding-right: calc(3 * var(--s));
 }
 .ph3,
 .p3 {
-  padding-left: calc(3 * var(--spacing));
+  padding-left: calc(3 * var(--s));
 }
 
 .pb3,
 .pv3,
 .p3 {
-  padding-bottom: calc(3 * var(--spacing));
+  padding-bottom: calc(3 * var(--s));
 }
 .pv3,
 .p3 {
-  padding-top: calc(3 * var(--spacing));
+  padding-top: calc(3 * var(--s));
 }

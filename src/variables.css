@@ -1,10 +1,16 @@
 /** Variables */
 
 :root {
-  --accent: #16e;
-  --black: #000;
-  --border-radius: 0.25rem;
-  --gray: #666;
-  --spacing: 0.75rem;
-  --white: #fff;
+  /** Accent color */
+  --a: #16e;
+  /** Black color */
+  --b: #000;
+  /** Border radius */
+  --br: 0.25rem;
+  /** Gray color */
+  --g: #666;
+  /** Spacing unit */
+  --s: 0.75rem;
+  /** White color */
+  --w: #fff;
 }

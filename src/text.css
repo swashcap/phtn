@@ -78,10 +78,10 @@
  * starting at 100% and 81.25%:
  *
  * ```
- * 1.0   (16/24)  0.8125 (13/18)
- * 1.618 (25/36)  1.315  (21/24)
- * 2.618 (42/48)  2.127  (34/36)
- * 4.236 (68/72)  3.442  (55/60)
+ * 1.0   (16/24)  0.8125 (13/16)
+ * 1.618 (25/32)  1.315  (21/24)
+ * 2.618 (42/48)  2.127  (34/40)
+ * 4.236 (68/72)  3.442  (55/64)
  * ```
  *
  * Markup:
@@ -111,7 +111,7 @@
  */
 .f1 {
   font-size: 1em;
-  line-height: calc(2 * var(--s));
+  line-height: calc(3 * var(--s));
 }
 
 /**
@@ -124,7 +124,7 @@
  */
 .f2 {
   font-size: 1.315em;
-  line-height: calc(2 * var(--s));
+  line-height: calc(3 * var(--s));
 }
 
 /**
@@ -137,7 +137,7 @@
  */
 .f3 {
   font-size: 1.618em;
-  line-height: calc(3 * var(--s));
+  line-height: calc(4 * var(--s));
 }
 
 /**
@@ -150,7 +150,7 @@
  */
 .f4 {
   font-size: 2.127em;
-  line-height: calc(3 * var(--s));
+  line-height: calc(5 * var(--s));
 }
 
 /**
@@ -163,7 +163,7 @@
  */
 .f5 {
   font-size: 2.618em;
-  line-height: calc(4 * var(--s));
+  line-height: calc(6 * var(--s));
 }
 
 /**
@@ -176,7 +176,7 @@
  */
 .f6 {
   font-size: 3.442em;
-  line-height: calc(5 * var(--s));
+  line-height: calc(8 * var(--s));
 }
 
 /**
@@ -189,7 +189,7 @@
  */
 .f7 {
   font-size: 4.236em;
-  line-height: calc(6 * var(--s));
+  line-height: calc(9 * var(--s));
 }
 
 /**
@@ -202,7 +202,7 @@
  */
 .fs {
   font-size: 13px;
-  line-height: var(1.5 * var(--s));
+  line-height: var(2 * var(--s));
 }
 
 /**

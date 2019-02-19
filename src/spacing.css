@@ -1,61 +1,114 @@
 /**
- * Margin
+ * Spacing
  *
- * Markup:
- * <div class="bgg mha" style="height: 100px; width: 100px"></div>
+ * Apply `margin` and `padding` in a uniform manner using `rem` units.
  *
- * Markup:
- * <p class="m0">No margin</p>
+ * phtn spacing classes begin with either `m` or `p`:
  *
- * Styleguide: Spacing.margin
+ * * `m`: margin
+ * * `p`: padding
+ *
+ * These can be composed with directional modifiers:
+ *
+ * * `h`: horizontal
+ * * `v`: vertical
+ * * `r`: right
+ * * `b`: bottom
+ *
+ * (phtn applies spacing primarily in the `bottom` and `right` directions.)
+ * Examples of composed spacing classes:
+ *
+ * * `mh`: apply margin in the horizontal directions (`left` and `right`)
+ * * `pv`: apply padding in vertical directions (`top` and `bottom`)
+ * * `mb`: apply margin in the `bottom` direction
+ * * `pr`: apply padding in the `right` direction
+ *
+ * Optionally compose with a numeric modifier (`0`, `1`, `2`, or `3`) to
+ * multiply the spacing:
+ *
+ * * `m0`: zero margin in all directions
+ * * `ph2`: double padding in the horizontal directions
+ * * `mb3`: triple margin in the bottom direction
+ *
+ * Styleguide Spacing
  */
 
-.mha {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/** Margin 0: Horizontal */
+/**
+ * Margin 0
+ *
+ * Markup:
+ * <div class="m0">Margin zero</div>
+ * <div class="mr0">Margin right zero</div>
+ * <div class="mb0">Margin bottom zero</div>
+ * <div class="mh0">Margin horizontal zero</div>
+ * <div class="mv0">Margin vertical zero</div>
+ *
+ * Styleguide Spacing - Margin - 0
+ */
+.m0,
 .mr0,
 .mh0 {
   margin-right: 0;
 }
+.m0,
 .mh0 {
   margin-left: 0;
 }
 
-/** Margin 0: Vertical */
+.m0,
 .mb0,
 .mv0 {
   margin-bottom: 0;
 }
+.m0,
 .mv0 {
   margin-top: 0;
 }
 
-/** Margin 1: Horizontal */
+/**
+ * Margin 1
+ *
+ * Markup:
+ * <div class="m">Margin one</div>
+ * <div class="mr">Margin right one</div>
+ * <div class="mb">Margin bottom one</div>
+ * <div class="mh">Margin horizontal one</div>
+ * <div class="mv">Margin vertical one</div>
+ *
+ * Styleguide Spacing - Margin - 1
+ */
 .mr,
 .mh,
-.m1 {
+.m {
   margin-right: var(--spacing);
 }
 .mh,
-.m1 {
+.m {
   margin-left: var(--spacing);
 }
 
-/** Margin 1: Vertical */
 .mb,
 .mv,
-.m1 {
+.m {
   margin-bottom: var(--spacing);
 }
 .mv,
-.m1 {
+.m {
   margin-top: var(--spacing);
 }
 
-/** Margin 2: Horizontal */
+/**
+ * Margin 2
+ *
+ * Markup:
+ * <div class="m2">Margin two</div>
+ * <div class="mr2">Margin right two</div>
+ * <div class="mb2">Margin bottom two</div>
+ * <div class="mh2">Margin horizontal two</div>
+ * <div class="mv2">Margin vertical two</div>
+ *
+ * Styleguide Spacing - Margin - 2
+ */
 .mr2,
 .mh2,
 .m2 {
@@ -66,7 +119,6 @@
   margin-left: calc(2 * var(--spacing));
 }
 
-/** Margin 2: Vertical */
 .mb2,
 .mv2,
 .m2 {
@@ -77,7 +129,18 @@
   margin-top: calc(2 * var(--spacing));
 }
 
-/** Margin 3: Horizontal */
+/**
+ * Margin 3
+ *
+ * Markup:
+ * <div class="m3">Margin three</div>
+ * <div class="mr3">Margin right three</div>
+ * <div class="mb3">Margin bottom three</div>
+ * <div class="mh3">Margin horizontal three</div>
+ * <div class="mv3">Margin vertical three</div>
+ *
+ * Styleguide Spacing - Margin - 3
+ */
 .mr3,
 .mh3,
 .m3 {
@@ -88,7 +151,6 @@
   margin-left: calc(3 * var(--spacing));
 }
 
-/** Margin 3: Vertical */
 .mb3,
 .mv3,
 .m3 {
@@ -99,47 +161,95 @@
   margin-top: calc(3 * var(--spacing));
 }
 
-/** Padding 0: Horizontal */
+/**
+ * Margin Auto
+ *
+ * Markup:
+ * <p class="mha" style="max-width: 100px">Sample text</p>
+ *
+ * Styleguide Spacing - Margin - Auto
+ */
+.mha {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/**
+ * Padding 0
+ *
+ * Markup:
+ * <div class="p0">Padding zero</div>
+ * <div class="pr0">Padding right zero</div>
+ * <div class="pb0">Padding bottom zero</div>
+ * <div class="ph0">Padding horizontal zero</div>
+ * <div class="pv0">Padding vertical zero</div>
+ *
+ * Styleguide Spacing - Padding - 0
+ */
+.p0,
 .pr0,
 .ph0 {
   padding-right: 0;
 }
+.p0,
 .ph0 {
   padding-left: 0;
 }
 
-/** Padding 0: Vertical */
+.p0,
 .pb0,
 .pv0 {
   padding-bottom: 0;
 }
+.p0,
 .pv0 {
   padding-top: 0;
 }
 
-/** Padding 1: Horizontal */
+/**
+ * Padding 1
+ *
+ * Markup:
+ * <div class="p">Padding one</div>
+ * <div class="pr">Padding right one</div>
+ * <div class="pb">Padding bottom one</div>
+ * <div class="ph">Padding horizontal one</div>
+ * <div class="pv">Padding vertical one</div>
+ *
+ * Styleguide Spacing - Padding - 1
+ */
 .pr,
 .ph,
-.p1 {
+.p {
   padding-right: var(--spacing);
 }
 .ph,
-.p1 {
+.p {
   padding-left: var(--spacing);
 }
 
-/** Padding 1: Vertical */
 .pb,
 .pv,
-.p1 {
+.p {
   padding-bottom: var(--spacing);
 }
 .pv,
-.p1 {
+.p {
   padding-top: var(--spacing);
 }
 
-/** Padding 2: Horizontal */
+/**
+ * Padding 2
+ *
+ * Markup:
+ * <div class="p2">Padding two</div>
+ * <div class="pr2">Padding right two</div>
+ * <div class="pb2">Padding bottom two</div>
+ * <div class="ph2">Padding horizontal two</div>
+ * <div class="pv2">Padding vertical two</div>
+ *
+ * Styleguide Spacing - Padding - 2
+ */
 .pr2,
 .ph2,
 .p2 {
@@ -150,7 +260,6 @@
   padding-left: calc(2 * var(--spacing));
 }
 
-/** Padding 2: Vertical */
 .pb2,
 .pv2,
 .p2 {
@@ -161,7 +270,18 @@
   padding-top: calc(2 * var(--spacing));
 }
 
-/** Padding 3: Horizontal */
+/**
+ * Padding 3
+ *
+ * Markup:
+ * <div class="p3">Padding three</div>
+ * <div class="pr3">Padding right three</div>
+ * <div class="pb3">Padding bottom three</div>
+ * <div class="ph3">Padding horizontal three</div>
+ * <div class="pv3">Padding vertical three</div>
+ *
+ * Styleguide Spacing - Padding - 3
+ */
 .pr3,
 .ph3,
 .p3 {
@@ -172,7 +292,6 @@
   padding-left: calc(3 * var(--spacing));
 }
 
-/** Padding 3: Vertical */
 .pb3,
 .pv3,
 .p3 {

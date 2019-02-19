@@ -7,7 +7,7 @@
  *   <p>Sample text</p>
  * </div>
  *
- * Styleguide: Layout.float
+ * Styleguide Layout - Float
  */
 .clear,
 .clearfix:after {
@@ -34,7 +34,7 @@
 /**
  * Flexbox
  *
- * Styleguide: Layout.flexbox
+ * Styleguide Layout - Flexbox
  */
 .flex {
   display: flex;

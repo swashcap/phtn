@@ -13,7 +13,7 @@ $kss-colors-link-hover    : lighten($kss-colors-link, 20%);
 $kss-colors-link-active   : #faa700;
 
 $kss-font-body            : Helvetica, 'Helvetica Neue', Arial, sans-serif;
-$kss-font-code            : Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
+$kss-font-code            : 'SF Mono', Consolas, Menlo, 'Ubuntu Mono', 'Lucida Console', 'Courier New', Courier, monospace;
 
 $kss-font-size            : 16px;
 $kss-vertical-rhythm      : $kss-font-size * 1.5;
@@ -88,14 +88,30 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   code,
   kbd,
   samp {
-    font-family: $kss-font-code;
     color: mix($kss-colors-foreground, $kss-colors-heading, 50%);
-    font-size: 1em;
+    font-family: $kss-font-code;
+    font-size: 87.5%;
+  }
+  code,
+  kbd,
+  samp {
+    background: #f8f8f8;
+    color: #000080;
+    border-radius: 2px;
+    padding: .2em .4em;
   }
 
   pre {
-    white-space: pre;
+    line-height: 1.6;
     overflow: scroll;
+    white-space: pre;
+    
+    code {
+      background: none;
+      color: inherit;
+      font-size: 100%;
+      line-height: inherit;
+    }
   }
 
   ins {
@@ -164,11 +180,18 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
 // ------------------------------------------------------------------------------
 
 #kss-node {
-  margin: 0;
-  padding: 20px;
   background: #fff;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: 769px) {
+    padding-left: 20%;
+  }
 
   &.kss-fullscreen-mode {
+    padding-left: 0;
+
     .kss-sidebar,
     .kss-section:not(.is-fullscreen),
     .kss-github {
@@ -176,43 +199,33 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
     }
   }
 
-  @media screen and (min-width: 769px) {
-    padding: 0;
-
-    .kss-main,
-    .kss-sidebar {
-      float: left;
-      margin-right: -100%;
-      box-sizing: border-box;
-    }
-  }
-
   .kss-main {
-    width: 100%;
     margin: 0 auto;
+    padding-left: $kss-vertical-rhythm;
+    padding-right: $kss-vertical-rhythm;
 
     @media screen and (min-width: 769px) {
+      max-width: 48em;
       width: 80%;
-      margin-left: 20%;
-      padding: 0 20px 0 30px;
     }
   }
 
   .kss-sidebar {
-    border-bottom:1px solid #ddd;
+    background-color: #eee;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 0 0 1px;
 
     @media screen and (min-width: 769px) {
+      border-width: 0 1px 0 0;
+      padding-bottom: $kss-vertical-rhythm;
+      padding-top: $kss-vertical-rhythm;
       position: fixed;
+      top: 0;
+      left: 0;
       width: 20%;
       height: 100%;
       overflow: auto;
-      padding: 0 10px 0 20px;
-      border-bottom: 0;
-      background-image: url(noise-low.png), -ms-radial-gradient(#fff, #eee);
-      background-image: url(noise-low.png), -o-radial-gradient(#fff, #eee);
-      background-image: url(noise-low.png), -webkit-radial-gradient(#fff, #eee);
-      background-image: url(noise-low.png), radial-gradient(#fff, #eee);
-      box-shadow: inset -10px 0 10px -10px rgba(0,0,0,0.7);
     }
   }
 }
@@ -231,18 +244,22 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
     }
   }
 
-  .kss-header,
-  .kss-nav {
+  .kss-header {
     @media screen and (min-width: 769px) {
-      margin-top: 2em;
+      padding: ($kss-vertical-rhythm / 2) $kss-vertical-rhythm;
     }
   }
 
   .kss-nav__menu {
-    margin-top: ($kss-vertical-rhythm/2);
-    margin-bottom: ($kss-vertical-rhythm/2);
+    margin: 0;
     padding: 0;
     list-style-type: none;
+  }
+  .kss-nav__menu > li {
+    @media screen and (min-width: 769px) {
+      border-top: 1px solid #ddd;
+      padding: ($kss-vertical-rhythm / 4) 0;
+    }
   }
 
   .kss-nav__menu-item {
@@ -256,8 +273,14 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
   }
 
   .kss-nav__menu-link {
-    position: relative;
     display: inline-block;
+    padding: $kss-vertical-rhythm / 2;
+    position: relative;
+
+    @media screen and (min-width: 769px) {
+      display: block;
+      padding: ($kss-vertical-rhythm / 4) $kss-vertical-rhythm;
+    }
 
     &:before {
       @media screen and (min-width: 769px) {
@@ -285,20 +308,6 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
       list-style-type: none;
       margin: 0;
       padding: 0;
-
-      // @TODO: The ul is output even when there are no children. Fix this, so
-      // we can put these :first-child and :last child styles back on the ul.
-      li:first-child {
-        margin-top: 10px;
-        border-top: 1px solid #ccc;
-        padding: 10px 0 0;
-      }
-
-      li:last-child {
-        margin-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-        padding: 0 0 10px;
-      }
     }
   }
 
@@ -482,9 +491,7 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
       overflow: visible;
     }
   }
-  .is-fullscreen .kss-toolbar a[data-kss-fullscreen],
-  &.kss-guides-mode .kss-toolbar a[data-kss-guides],
-  &.kss-markup-mode .kss-toolbar a[data-kss-markup] {
+  .is-fullscreen .kss-toolbar a[data-kss-fullscreen] {
     border-color: #666;
     background-color: #666;
 
@@ -528,7 +535,11 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
 
   .kss-modifier__wrapper {
     border: 1px solid #ccc;
-    padding: 0 10px 10px;
+    padding: $kss-vertical-rhythm / 2;
+
+    @media screen and (min-width: 769px) {
+      padding: $kss-vertical-rhythm;
+    }
   }
   .is-fullscreen .kss-modifier__wrapper {
     // Un-do padding on .kss-section.
@@ -538,17 +549,6 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
     padding-left: 0;
     padding-right: 0;
     border: none;
-  }
-  .kss-modifier__heading {
-    margin: 0 -10px 10px -10px;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    background-color: #eee;
-    font-weight: bold;
-  }
-  .is-fullscreen .kss-modifier__heading {
-    margin: 0 20px 10px;
-    border: 1px solid #ccc;
   }
   .kss-modifier__default-name {
     font-weight: bold;
@@ -583,85 +583,11 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
       margin-bottom: 0;
     }
   }
-  &.kss-guides-mode .kss-modifier__example,
-  &.kss-guides-mode .kss-modifier__example-footer {
-    &:before,
-    &:after {
-      z-index: -1;
-      box-sizing: border-box;
-      content: '';
-      position: absolute;
-      width: 5px;
-      height: 5px;
-      border: 2px solid #000;
-    }
-  }
-  &.kss-guides-mode .kss-modifier__example {
-    border-color: #000;
-
-    &:before {
-      top: -5px;
-      left: -5px;
-      border-top: 0;
-      border-left: 0;
-    }
-    &:after {
-      top: -5px;
-      right: -5px;
-      border-top: 0;
-      border-right: 0;
-    }
-  }
-  &.kss-guides-mode.kss-fullscreen-mode .kss-modifier__example {
-    &:before {
-      left: auto;
-      right: 0;
-    }
-    &:after {
-      right: auto;
-      left: 0;
-    }
-  }
   .kss-modifier__example-footer {
     clear: both;
   }
-  &.kss-guides-mode .kss-modifier__example-footer {
-    &:before {
-      bottom: -5px;
-      left: -5px;
-      border-bottom: 0;
-      border-left: 0;
-    }
-    &:after {
-      bottom: -5px;
-      right: -5px;
-      border-right: 0;
-      border-bottom: 0;
-    }
-  }
-  &.kss-guides-mode.kss-fullscreen-mode .kss-modifier__example-footer {
-    &:before {
-      left: auto;
-      right: 0;
-    }
-    &:after {
-      right: auto;
-      left: 0;
-    }
-  }
 
   .kss-markup {
-    margin: $kss-vertical-rhythm 0;
-    border: 1px solid #ccc;
-
-    &[open] summary {
-      border-bottom: 1px solid #ccc;
-    }
-
-    summary {
-      padding-left: 10px;
-    }
-
     pre {
       margin: 0;
     }
@@ -738,9 +664,15 @@ $kss-vertical-rhythm      : $kss-font-size * 1.5;
     }
   }
 
+  pre.hljs {
+    padding: $kss-vertical-rhythm / 2;
+    @media screen and (min-width: 769px) {
+      padding: $kss-vertical-rhythm;
+    }
+  }
   pre.hljs code {
     color: inherit;
   }
 
-  @import '../node_modules/highlight.js/styles/vs2015';
 }
+@import '../../node_modules/highlight.js/styles/github';

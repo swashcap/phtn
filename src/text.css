@@ -110,7 +110,7 @@
  * Styleguide Text - Sizes - 1
  */
 .f1 {
-  font-size: 1em;
+  font-size: 1rem;
   line-height: calc(3 * var(--s));
 }
 
@@ -123,7 +123,7 @@
  * Styleguide Text - Sizes - 2
  */
 .f2 {
-  font-size: 1.315em;
+  font-size: 1.315rem;
   line-height: calc(3 * var(--s));
 }
 
@@ -136,7 +136,7 @@
  * Styleguide Text - Sizes - 3
  */
 .f3 {
-  font-size: 1.618em;
+  font-size: 1.618rem;
   line-height: calc(4 * var(--s));
 }
 
@@ -149,7 +149,7 @@
  * Styleguide Text - Sizes - 4
  */
 .f4 {
-  font-size: 2.127em;
+  font-size: 2.127rem;
   line-height: calc(5 * var(--s));
 }
 
@@ -162,7 +162,7 @@
  * Styleguide Text - Sizes - 5
  */
 .f5 {
-  font-size: 2.618em;
+  font-size: 2.618rem;
   line-height: calc(6 * var(--s));
 }
 
@@ -175,7 +175,7 @@
  * Styleguide Text - Sizes - 6
  */
 .f6 {
-  font-size: 3.442em;
+  font-size: 3.442rem;
   line-height: calc(8 * var(--s));
 }
 
@@ -188,7 +188,7 @@
  * Styleguide Text - Sizes - 7
  */
 .f7 {
-  font-size: 4.236em;
+  font-size: 4.236rem;
   line-height: calc(9 * var(--s));
 }
 
@@ -201,8 +201,8 @@
  * Styleguide Text - Sizes - Small
  */
 .fs {
-  font-size: 0.8125em;
-  line-height: var(2 * var(--s));
+  font-size: 0.8125rem;
+  line-height: calc(2 * var(--s));
 }
 
 /**

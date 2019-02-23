@@ -21,3 +21,12 @@ cat src/variables.css src/element.css src/layout.css src/text.css \
   src/spacing.css >> dist/phtn.css
 
 node_modules/.bin/csso -i dist/phtn.css > dist/phtn.min.css
+
+# csso doesn't trim trailing spaces in variable declaration
+# https://github.com/css/csso/issues/393
+REPLACE='s/--([^:]+): /--\1:/g'
+if [ -z "$CI" ]; then
+  sed -i '' -E "$REPLACE" dist/phtn.min.css
+else
+  sed --in-place -E "$REPLACE" dist/phtn.min.css
+fi

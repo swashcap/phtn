@@ -201,7 +201,7 @@
  * Styleguide Text - Sizes - Small
  */
 .fs {
-  font-size: 13px;
+  font-size: 0.8125em;
   line-height: var(2 * var(--s));
 }
 

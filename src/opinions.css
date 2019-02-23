@@ -1,0 +1,460 @@
+/**
+ * Opinions
+ *
+ * Opinionated styles for all elements.
+ *
+ * Styleguide Opinions
+ */
+
+/**
+ * Block Elements
+ *
+ * Markup:
+ * <div>
+ *   <h1>Heading 1</h1>
+ *   <h2>Heading 2</h2>
+ *   <h3>Heading 3</h3>
+ *   <h4>Heading 4</h4>
+ *   <h5>Heading 5</h5>
+ *   <h6>Heading 6</h6>
+ *   <p>
+ *     Ac mollis neque dui vitae arcu. Fusce fringilla lectus ut ipsum
+ *     condimentum a egestas odio pretium. Fusce vehicula erat a eros fermentum
+ *     vestibulum.
+ *   </p>
+ *   <blockquote>
+ *     <p>In a nisi eu dolor adipiscing facilisis sed et est.</p>
+ *   </blockquote>
+ *   <pre>Phasellus suscipit ipsum
+ * nec purus luctus ut
+ * euismod nisi dapibus.</pre>
+ *   <article>
+ *     <p>Nullam ut tincidunt nunc. Pellentesque metus lacus, commodo eget justo
+ *     ut, rutrum varius nunc. Sed non rhoncus risus.</p>
+ *     <p>Morbi sodales gravida pulvinar. Duis malesuada, odio volutpat
+ *     elementum vulputate, massa magna scelerisque ante, et accumsan tellus
+ *     nunc in sem.</p>
+ *   </article>
+ *   <hr />
+ *   <address>
+ *     Donec mattis arcu<br />
+ *     Et velit aliquet<br />
+ *     Non sagittis justo vestibulum
+ *   </address>
+ *   <aside>
+ *     <p>Suspendisse volutpat felis lectus, nec consequat ipsum mattis id.
+ *     Donec dapibus vehicula facilisis.</p>
+ *   </aside>
+ *   <section>
+ *     <p>In tincidunt mi nisi, nec faucibus tortor euismod nec.</p>
+ *   </section>
+ *   <nav>
+ *     <ul>
+ *       <li><a href="#">Suspendisse</a></li>
+ *       <li><a href="#">Ante Ligula</a></li>
+ *     </ul>
+ *   </nav>
+ *   <figure>
+ *     <img
+ *       alt="A placeholder kitten"
+ *       src="https://placekitten.com/200/300?image=11"
+ *     />
+ *     <figcaption>Aliquet vitae libero eu, vulputate dapibus.</figcaption>
+ *   </figure>
+ *   <header>
+ *     <h1>Sed Bibendum</h1>
+ *     <p>Sapien at posuere interdum, libero est sollicitudin magna.</p>
+ *   </header>
+ *   <footer>
+ *     <p>Ac gravida tellus purus eu ipsum. Proin ut quam arcu.</p>
+ *   </footer>
+ * </div>
+ *
+ * Styleguide Opinions - Block Elements
+ */
+
+/**
+ * List Elements
+ *
+ * Markup:
+ * <div>
+ *   <ul>
+ *     <li>Proin vestibulum nunc</li>
+ *     <li>In metus cursus at aliquam neque mollis</li>
+ *     <li>Curabitur hendrerit porta</li>
+ *   </ul>
+ *   <ol>
+ *     <li>Nibh, a dignissim</li>
+ *     <li>Diam tempor eu</li>
+ *     <li>Nam id erat dictum velit facilisis</li>
+ *   </ol>
+ *   <dl>
+ *     <dt>Tincidunt</dt>
+ *     <dd>Etiam auctor, felis et auctor</dd>
+ *     <dt>Blandit</dt>
+ *     <dd>Eros quam aliquam orci</dd>
+ *   </dl>
+ * </div>
+ *
+ * Styleguide Opinions - List Elements
+ */
+
+html {
+  color: var(--b);
+  font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  line-height: calc(3 * var(--s));
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Consolas, Monaco, "Courier New", Courier, monospace;
+}
+
+/**
+ * Inline Elements
+ * 
+ * Markup:
+ * <div>
+ *   <p><a href="#">Lorem dignissim condimentum</a> mattis non lorem.</p>
+ *   <p><strong>Suspendisse potenti.</strong></p>
+ *   <p><em>Praesent nec nulla elit.</em></p>
+ *   <p><b>Sit amet molestie metus.</b></p>
+ *   <p><i>Curabitur consectetur, ipsum sit.</i></p>
+ *   <p>Amet fringilla <code>imperdiet</code>, nisi nulla pharetra nunc.</p>
+ *   <p>Et consectetur <del>nulla nisl</del> <ins>a dolor</ins>.</p>
+ *   <p>
+ *     Etiam hendrerit tortor <abbr title="Natoque Odio Nulla">non</abbr> mauris
+ *     gravida et molestie ipsum eleifend.
+ *   </p>
+ *   <p>
+ *   <small>
+ *     Vestibulum eget metus in lorem dignissim condimentum mattis non lorem.
+ *   </small>
+ *   </p>
+ *   <p>
+ *     Donec volutpat viverra turpis, nec <code>tristique</code> dui aliquet
+ *     non. Maecenas <kbd>justo lorem</kbd>, vestibulum eu <data>feugiat</data>
+ *     <samp>vitae</samp>, ultrices nec ipsum.
+ *   </p>
+ *   <p><q>Suspendisse potenti,</q> donec <cite>Ante Velit</cite>.</p>
+ *   <p>Velit, ornare at <mark>augue quis</mark>, tristique laoreet sem.</p>
+ *   <p>
+ *     Etiam in ipsum elit <time datetime="2019-02-23T18:51:47Z">today</time>.
+ *   </p>
+ *   <p>Nullam cursus dolor<sub>sit</sub> amet nulla <sup>feugiat</sup>.</p>
+ * </div>
+ *
+ * Styleguide Opinions - Inline Elements
+ */
+
+a {
+  color: var(--a);
+}
+a:focus,
+a:hover {
+  color: var(--a2);
+}
+a:active {
+  color: var(--a3);
+}
+code,
+kbd,
+samp {
+  font-size: 0.875em;
+}
+mark {
+  padding: 0.1em 0.25em;
+}
+
+blockquote,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre,
+ol,
+ul {
+  margin-top: 0;
+}
+blockquote,
+dl,
+figure,
+h1,
+h2,
+h3,
+hr,
+p,
+pre,
+ol,
+ul {
+  margin-bottom: calc(3 * var(--s));
+}
+h4,
+h5,
+h6 {
+  margin-bottom: calc(1 * var(--s));
+}
+
+blockquote,
+dd,
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+blockquote,
+dd,
+figure,
+ol,
+pre,
+ul {
+  padding-left: calc(4 * var(--s));
+}
+
+/** Text Size 5 */
+h1 {
+  font-size: 2.618rem;
+  line-height: calc(6 * var(--s));
+}
+
+/** Text Size 4 */
+h2 {
+  font-size: 2.127rem;
+  line-height: calc(5 * var(--s));
+}
+
+/** Text Size 3 */
+h3 {
+  font-size: 1.618rem;
+  line-height: calc(4 * var(--s));
+}
+
+/** Text Size 2 */
+h4 {
+  font-size: 1.315rem;
+  line-height: calc(3 * var(--s));
+}
+
+/** Text Size 1 */
+h5 {
+  font-size: 1rem;
+  line-height: calc(3 * var(--s));
+}
+
+/** Text Size Small */
+h6,
+small,
+sub,
+sup {
+  font-size: 0.8125rem;
+}
+sub,
+sup {
+  line-height: 1;
+}
+h6,
+small {
+  line-height: calc(2 * var(--s));
+}
+hr {
+  border-color: var(--g);
+  border-style: solid;
+  border-width: 1px 0 0;
+}
+pre {
+  font-size: 0.875em;
+  line-height: calc(3 * var(--s));
+}
+pre code,
+pre kbd,
+pre samp {
+  font-size: 100%;
+  line-height: inherit;
+}
+
+/**
+ * Form Elements
+ *
+ * Markup:
+ * <form>
+ *   <input placeholder="Ex: Pat Smith" />
+ *   <input type="date" />
+ *   <input type="password" />
+ *   <input type="search" />
+ *   <textarea></textarea>
+ *   <div>
+ *     <select>
+ *       <option disabled selected>Choose…</option>
+ *       <option value="1">One</option>
+ *       <option value="2">Two</option>
+ *       <option value="3">Three</option>
+ *     </select>
+ *   </div>
+ *   <div>
+ *     <input checked id="checkbox-1" name="checkbox" type="checkbox" />
+ *     <label for="checkbox-1">One</label>
+ *     <input id="checkbox-2" name="checkbox" type="checkbox" />
+ *     <label for="checkbox-2">Two</label>
+ *   </div>
+ *   <fieldset>
+ *     <input checked id="radio-1" name="radio" type="radio" value="1" />
+ *     <label for="radio-1">One</label>
+ *     <input id="radio-2" name="radio" type="radio" value="2" />
+ *     <label for="radio-2">Two</label>
+ *     <input id="radio-3" name="radio" type="radio" value="3" />
+ *     <label for="radio-3">Three</label>
+ *   </fieldset>
+ *   <button type="button">Button</button>
+ *   <input value="Button" type="submit" />
+ *   <input value="Cancel" type="reset" />
+ * </form>
+ *
+ * Styleguide Opinions - Form Elements
+ */
+
+fieldset {
+  border: 1px solid var(--g);
+  border-radius: var(--br);
+  margin-bottom: calc(3 * var(--s));
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: calc(3 * var(--s));
+  padding: calc(2 * var(--s));
+}
+
+label[for] {
+  cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  margin: 0;
+}
+/**
+ * Unset browser `search` styling
+ * @link https://stackoverflow.com/a/36312969
+ */
+input[type="search"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+button,
+input,
+textarea {
+  border: 1px solid transparent;
+  border-radius: var(--br);
+  padding: var(--s) calc(2 * var(--s));
+}
+input,
+textarea {
+  background: var(--w);
+  border-color: var(--g);
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--g);
+}
+button,
+input[type="reset"],
+input[type="submit"] {
+  border-color: transparent;
+  color: var(--w);
+  cursor: pointer;
+  display: inline-block;
+}
+button,
+input[type="submit"] {
+  background: var(--a);
+}
+input[type="reset"] {
+  background: var(--g);
+}
+
+button:focus,
+button:hover,
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+  background: var(--a2);
+}
+input[type="reset"]:focus,
+input[type="reset"]:hover {
+  background: var(--b);
+}
+
+button:active,
+input[type="submit"]:active {
+  background: var(--a3);
+}
+input[type="reset"]:active {
+  background: var(--b);
+}
+
+/**
+ * Table
+ *
+ * Markup:
+ * <table>
+ *   <thead>
+ *     <tr>
+ *       <th>Morbi est tellus</th>
+ *       <th>Dapibus</th>
+ *       <th>At imperdiet non</th>
+ *     </tr>
+ *   </thead>
+ *   <tbody>
+ *     <tr>
+ *       <td>Ultricies ut risus</td>
+ *       <td>10</td>
+ *       <td>14</td>
+ *     </tr>
+ *     <tr>
+ *       <td>Nunc faucibus</td>
+ *       <td>9</td>
+ *       <td>16</td>
+ *     </tr>
+ *     <tr>
+ *       <td>Leo in augue sodales</td>
+ *       <td>7</td>
+ *       <td>22</td>
+ *     </tr>
+ *     <tr>
+ *       <td>Eget rhoncus dolor lobortis</td>
+ *       <td>5</td>
+ *       <td>1</td7>
+ *     </tr>
+ *   </tbody>
+ * </table>
+ *
+ * Styleguide Opinions - Table
+ */
+
+table {
+  border-collapse: collapse;
+  border-left: 1px solid var(--g3);
+  border-top: 1px solid var(--g3);
+  margin-bottom: calc(3 * var(--s));
+  width: 100%;
+}
+thead {
+  text-align: left;
+}
+td,
+th {
+  border-bottom: 1px solid var(--g3);
+  border-right: 1px solid var(--g3);
+  padding: var(--s) calc(2 * var(--s));
+}

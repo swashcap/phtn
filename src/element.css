@@ -1,66 +1,210 @@
 /**
- * Background color
+ * Backgrounds
+ *
+ * Provide a `background-color` to an element.
+ *
+ * Styleguide Element - Background
+ */
+
+/**
+ * Accent backgrounds
  *
  * Markup:
- * <div class="bga" style="height: 100px; width: 100px"></div>
- * <div class="bgb" style="height: 100px; width: 100px"></div>
- * <div class="bgg" style="height: 100px; width: 100px"></div>
- * <div class="bgw" style="height: 100px; width: 100px"></div>
+ * <div class="bga" style="height: 100px"></div>
+ * <div class="bga2" style="height: 100px"></div>
+ * <div class="bga3" style="height: 100px"></div>
  *
- * Styleguide Element.background
+ * Styleguide Element - Background - Accents
  */
 .bga {
-  background-color: var(--accent);
+  background-color: var(--a);
 }
+.bga2 {
+  background-color: var(--a2);
+}
+.bga3 {
+  background-color: var(--a3);
+}
+
+/**
+ * Black background
+ *
+ * Markup:
+ * <div class="bgb" style="height: 100px"></div>
+ *
+ * Styleguide Element - Background - Black
+ */
 .bgb {
-  background-color: var(--black);
+  background-color: var(--b);
 }
+
+/**
+ * Gray backgrounds
+ *
+ * Markup:
+ * <div class="bgg" style="height: 100px"></div>
+ * <div class="bgg2" style="height: 100px"></div>
+ * <div class="bgg3" style="height: 100px"></div>
+ * <div class="bgg4" style="height: 100px"></div>
+ *
+ * Styleguide Element - Background - Grays
+ */
 .bgg {
-  background-color: var(--gray);
+  background-color: var(--g);
 }
+.bgg2 {
+  background-color: var(--g2);
+}
+.bgg3 {
+  background-color: var(--g3);
+}
+.bgg4 {
+  background-color: var(--g4);
+}
+
+/**
+ * White background
+ *
+ * Markup:
+ * <div class="bgw" style="border: 1px solid; height: 100px"></div>
+ *
+ * Styleguide Element - Background - White
+ */
 .bgw {
-  background-color: var(--white);
+  background-color: var(--w);
 }
 
 /**
  * Border
  *
+ * Colored borders
+ *
+ * Styleguide Element - Border
+ */
+.ba,
+.bb,
+.bg {
+  border: 1px solid transparent;
+}
+
+/**
+ * Accent Border
+ *
+ * Markup
+ * <div class="ba">Accent</div>
+ *
+ * Styleguide Element - Border - Accent
+ */
+.ba {
+  border-color: var(--a);
+}
+
+/**
+ * Black Border
+ *
+ * Markup
+ * <div class="bb">Black</div>
+ *
+ * Styleguide Element - Border - Black
+ */
+.bb {
+  border-color: var(--b);
+}
+
+/**
+ * Gray Border
+ *
+ * Markup
+ * <div class="bg">Gray</div>
+ *
+ * Styleguide Element - Border - Gray
+ */
+.bg {
+  border-color: var(--g);
+}
+/**
+ * Border Radius
+ *
+ * Apply a `border-radius`.
+ *
+ * Markup:
  * <div class="bgg br" style="height: 100px; width: 100px"></div>
  *
- * Styleguide: Element.border
+ * Styleguide Element - Border Radius
  */
 .br {
-  border-radius: var(--border-radius);
+  border-radius: var(--br);
 }
 
 /**
  * Display
  *
- * Markup:
- * <div class="dib">
- *   <code>inline-block</code>
- * </div>
- * <div class="db">
- *   <code>block</code>
- * </div>
- * <div class="di">
- *   <code>inline</code>
- * </div>
- * <div class="dn">
- *   <code>none</code>
- * </div>
+ * Helper classes for `display`.
  *
- * Styleguide: Element.display
+ * Styleguide Element - Display
+ */
+
+/**
+ * block
+ *
+ * Markup:
+ * <span class="db">block</span>
+ *
+ * Styleguide Element - Display - block
+ */
+.db {
+  display: block;
+}
+
+/**
+ * inline-block
+ *
+ * Markup:
+ * <div class="dib">inline-block</div>
+ *
+ * Styleguide Element - Display - inline-block
  */
 .dib {
   display: inline-block;
 }
-.db {
-  display: block;
-}
+
+/**
+ * inline
+ *
+ * Markup:
+ * <div class="di">inline</div>
+ *
+ * Styleguide Element - Display - inline
+ */
 .di {
   display: inline;
 }
+
+/**
+ * none
+ *
+ * Markup:
+ * <div class="dn">none</div>
+ *
+ * Styleguide Element - Display - none
+ */
 .dn {
   display: none;
+}
+
+/**
+ * List Style None
+ *
+ * Unset a list element's `list-style`.
+ *
+ * Markup:
+ * <ul class="ls0">
+ *   <li>One</li>
+ *   <li>Two</li>
+ * </ul>
+ *
+ * Styleguide Element - List Style None
+ */
+.ls0 {
+  list-style: none;
 }

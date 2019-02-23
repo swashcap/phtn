@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{options.title}}</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  {{{styles}}}
+</head>
+<body class="m0{{#if template.isItem}} fullscreen-mode{{/if}}">
+
+<div class="sidebar bgg4">
+  <header class="p2">
+    <h1 class="f1 fw7 m0">{{options.title}}</h1>
+  </header>
+  <nav aria-label="Style Guide">
+    <ol class="ls0 m0 p0">
+      <li class="pv">
+        <a class="cb db pv ph2 td0" href="./">
+          <span class="ref-no cg dib fs fw7">0</span
+          ><span class="ca">Overview</span>
+        </a>
+      </li>
+    {{#each menu}}
+      <li class="pv">
+        <a class="cb db pv ph2 td0" href="section-{{referenceURI}}.html">
+          <span class="ref-no cg dib fs fw7">{{referenceNumber}}</span
+          ><span class="ca">{{header}}</span>
+        </a>
+        {{#if children}}
+          <ol class="ls0 m0 p0">
+          {{#each children}}
+            <li>
+              <a class="cb db pv ph2 td0" href="section-{{../referenceURI}}.html#kssref-{{referenceURI}}">
+                <span class="ref-no cg dib fs fw7 {{#if isGrandChild}}kss-nav__ref-child{{/if}}">{{referenceNumber}}</span
+                ><span class="ca">{{header}}</span>
+              </a>
+            </li>
+          {{/each}}
+          </ol>
+        {{/if}}
+      </li>
+    {{/each}}
+    </ol>
+  </nav>
+</div>
+<main aria-label="Content" class="mha ph2" id="content">
+  <article class="mv6">
+  {{#if template.isHomepage}}
+    {{#if homepage}}
+      <div id="kssref-0">
+        {{{homepage}}}
+      </div>
+    {{/if}}
+  {{else}}
+
+  {{!
+    Display each section, in order.
+
+    The "root" element comes first in this loop, and can be detected using
+    the "#if @first" block as seen below.
+  }}
+  {{#each sections}}
+    <{{#if @first}}div{{else}}section{{/if}}
+      id="kssref-{{referenceURI}}"
+      class="mb6{{#if @root.template.isItem}} is-fullscreen{{/if}}"
+    >
+      <div>
+        <h{{depth}} class="{{#ifEquals depth 1}} fw4 f6{{/ifEquals}}">
+          <a class="db cb td0" href="#kssref-{{referenceURI}}">
+            <span class="cg db fs fw7 mb">
+              Section {{referenceNumber}}
+            </span>
+            {{header}}
+          </a>
+        </h{{depth}}>
+
+        {{#if example}}
+          <p class="kss-toolbar">
+            {{#unless @root.template.isItem}}
+              <a href="#kssref-{{referenceURI}}" data-kss-fullscreen="kssref-{{referenceURI}}">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+              </a>
+              <a href="item-{{referenceURI}}.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+              </a>
+            {{/unless}}
+          </p>
+        {{/if}}
+
+        {{#if description}}
+          <div>
+            {{{description}}}
+          </div>
+        {{/if}}
+
+        {{#if colors }}
+          <ul class="kss-colors">
+            {{#each colors}}
+              <li>
+                <figure class="kss-color">
+                  <div class="kss-color-figure" style="background-color:{{color}}"></div>
+                  <figcaption class="kss-color-caption">
+                    {{#if name }}
+                      <strong class="kss-color-name">{{ color.name }}</strong>
+                    {{/if}}
+                    <strong class="kss-color-name">{{name}}</strong>
+                    <code class="kss-color-code">{{color}}</code>
+                    {{#if description}}
+                      <p class="kss-color-desc">{{description}}</p>
+                    {{/if}}
+                  </figcaption>
+                </figure>
+              </li>
+            {{/each}}
+          </ul>
+        {{/if}}
+
+        {{#if parameters}}
+          <div class="kss-parameters__title">Parameters:</div>
+          <ul class="kss-parameters">
+          {{#each parameters}}
+            <li class="kss-parameters__item">
+              <div class="kss-parameters__name"><code>{{name}}</code></div>
+              <div class="kss-parameters__description">
+                {{{description}}}
+                {{#if defaultValue}}
+                  <div class="kss-parameters__default-value">
+                    Defaults to: <code>{{defaultValue}}</code>
+                  </div>
+                {{/if}}
+              </div>
+            </li>
+          {{/each}}
+          </ul>
+        {{/if}}
+      </div>
+
+      {{#if example}}
+        <div>
+          {{#if modifiers}}
+            <div class="kss-modifier__default-name kss-style">
+              Default styling
+            </div>
+          {{/if}}
+
+          <div class="bg p3">
+            {{{example}}}
+          </div>
+
+          {{#each modifiers}}
+            <div class="kss-modifier__name kss-style">
+              {{name}}
+            </div>
+            <div class="kss-modifier__description kss-style">
+              {{{description}}}
+            </div>
+            <div class="kss-modifier__example">
+              {{{markup}}}
+              <div class="kss-modifier__example-footer"></div>
+            </div>
+          {{/each}}
+        </div>
+
+        {{#if markup}}
+          <pre class="hljs bg4 mb2 p3"><code class="language-handlebars">{{{hljs markup 'handlebars'}}}</code></pre>
+        {{/if}}
+      {{/if}}
+
+      {{#if source.filename}}
+        <small class="db">
+          Source: <code>{{source.filename}}</code>, line {{source.line}}
+        </small>
+      {{/if}}
+
+    </{{#if @first}}div{{else}}section{{/if}}>
+  {{/each}}
+{{/if}}
+</article>
+</main>
+
+<!-- SCRIPTS -->
+{{{scripts}}}
+
+</body>
+</html>

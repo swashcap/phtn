@@ -1,184 +1,495 @@
 /**
- * Margin
+ * Spacing
  *
- * Markup:
- * <div class="bgg mha" style="height: 100px; width: 100px"></div>
+ * Apply `margin` and `padding` in a uniform manner using `rem` units.
  *
- * Markup:
- * <p class="m0">No margin</p>
+ * phtn spacing classes begin with either `m` or `p`:
  *
- * Styleguide: Spacing.margin
+ * * `m`: margin
+ * * `p`: padding
+ *
+ * These can be composed with directional modifiers:
+ *
+ * * `h`: horizontal
+ * * `v`: vertical
+ * * `r`: right
+ * * `b`: bottom
+ *
+ * (phtn applies spacing primarily in the `bottom` and `right` directions.)
+ * Examples of composed spacing classes:
+ *
+ * * `mh`: apply margin in the horizontal directions (`left` and `right`)
+ * * `pv`: apply padding in vertical directions (`top` and `bottom`)
+ * * `mb`: apply margin in the `bottom` direction
+ * * `pr`: apply padding in the `right` direction
+ *
+ * Optionally compose with a numeric modifier (`0` through `6`) to multiple the
+ * spacing:
+ *
+ * * `m0`: zero margin in all directions
+ * * `ph2`: double padding in the horizontal directions
+ * * `mb3`: triple margin in the bottom direction
+ *
+ * Styleguide Spacing
  */
 
+/**
+ * Margin 0
+ *
+ * Markup:
+ * <div class="m0">Margin zero</div>
+ * <div class="mr0">Margin right zero</div>
+ * <div class="mb0">Margin bottom zero</div>
+ * <div class="mh0">Margin horizontal zero</div>
+ * <div class="mv0">Margin vertical zero</div>
+ *
+ * Styleguide Spacing - Margin - 0
+ */
+.m0,
+.mr0,
+.mh0 {
+  margin-right: 0;
+}
+.m0,
+.mh0 {
+  margin-left: 0;
+}
+
+.m0,
+.mb0,
+.mv0 {
+  margin-bottom: 0;
+}
+.m0,
+.mv0 {
+  margin-top: 0;
+}
+
+/**
+ * Margin 1
+ *
+ * Markup:
+ * <div class="m">Margin one</div>
+ * <div class="mr">Margin right one</div>
+ * <div class="mb">Margin bottom one</div>
+ * <div class="mh">Margin horizontal one</div>
+ * <div class="mv">Margin vertical one</div>
+ *
+ * Styleguide Spacing - Margin - 1
+ */
+.mr,
+.mh,
+.m {
+  margin-right: var(--s);
+}
+.mh,
+.m {
+  margin-left: var(--s);
+}
+
+.mb,
+.mv,
+.m {
+  margin-bottom: var(--s);
+}
+.mv,
+.m {
+  margin-top: var(--s);
+}
+
+/**
+ * Margin 2
+ *
+ * Markup:
+ * <div class="m2">Margin two</div>
+ * <div class="mr2">Margin right two</div>
+ * <div class="mb2">Margin bottom two</div>
+ * <div class="mh2">Margin horizontal two</div>
+ * <div class="mv2">Margin vertical two</div>
+ *
+ * Styleguide Spacing - Margin - 2
+ */
+.mr2,
+.mh2,
+.m2 {
+  margin-right: calc(2 * var(--s));
+}
+.mh2,
+.m2 {
+  margin-left: calc(2 * var(--s));
+}
+
+.mb2,
+.mv2,
+.m2 {
+  margin-bottom: calc(2 * var(--s));
+}
+.mv2,
+.m2 {
+  margin-top: calc(2 * var(--s));
+}
+
+/**
+ * Margin 3
+ *
+ * Markup:
+ * <div class="m3">Margin three</div>
+ * <div class="mr3">Margin right three</div>
+ * <div class="mb3">Margin bottom three</div>
+ * <div class="mh3">Margin horizontal three</div>
+ * <div class="mv3">Margin vertical three</div>
+ *
+ * Styleguide Spacing - Margin - 3
+ */
+.mr3,
+.mh3,
+.m3 {
+  margin-right: calc(3 * var(--s));
+}
+.mh3,
+.m3 {
+  margin-left: calc(3 * var(--s));
+}
+
+.mb3,
+.mv3,
+.m3 {
+  margin-bottom: calc(3 * var(--s));
+}
+.mv3,
+.m3 {
+  margin-top: calc(3 * var(--s));
+}
+
+/**
+ * Margin 4
+ *
+ * Markup:
+ * <div class="m4">Margin three</div>
+ * <div class="mr4">Margin right three</div>
+ * <div class="mb4">Margin bottom three</div>
+ * <div class="mh4">Margin horizontal three</div>
+ * <div class="mv4">Margin vertical three</div>
+ *
+ * Styleguide Spacing - Margin - 4
+ */
+.mr4,
+.mh4,
+.m4 {
+  margin-right: calc(4 * var(--s));
+}
+.mh4,
+.m4 {
+  margin-left: calc(4 * var(--s));
+}
+
+.mb4,
+.mv4,
+.m4 {
+  margin-bottom: calc(4 * var(--s));
+}
+.mv4,
+.m4 {
+  margin-top: calc(4 * var(--s));
+}
+
+/**
+ * Margin 5
+ *
+ * Markup:
+ * <div class="m5">Margin three</div>
+ * <div class="mr5">Margin right three</div>
+ * <div class="mb5">Margin bottom three</div>
+ * <div class="mh5">Margin horizontal three</div>
+ * <div class="mv5">Margin vertical three</div>
+ *
+ * Styleguide Spacing - Margin - 5
+ */
+.mr5,
+.mh5,
+.m5 {
+  margin-right: calc(5 * var(--s));
+}
+.mh5,
+.m5 {
+  margin-left: calc(5 * var(--s));
+}
+
+.mb5,
+.mv5,
+.m5 {
+  margin-bottom: calc(5 * var(--s));
+}
+.mv5,
+.m5 {
+  margin-top: calc(5 * var(--s));
+}
+
+/**
+ * Margin 6
+ *
+ * Markup:
+ * <div class="m6">Margin three</div>
+ * <div class="mr6">Margin right three</div>
+ * <div class="mb6">Margin bottom three</div>
+ * <div class="mh6">Margin horizontal three</div>
+ * <div class="mv6">Margin vertical three</div>
+ *
+ * Styleguide Spacing - Margin - 6
+ */
+.mr6,
+.mh6,
+.m6 {
+  margin-right: calc(6 * var(--s));
+}
+.mh6,
+.m6 {
+  margin-left: calc(6 * var(--s));
+}
+
+.mb6,
+.mv6,
+.m6 {
+  margin-bottom: calc(6 * var(--s));
+}
+.mv6,
+.m6 {
+  margin-top: calc(6 * var(--s));
+}
+
+/**
+ * Margin Auto
+ *
+ * Markup:
+ * <p class="mha" style="max-width: 100px">Sample text</p>
+ *
+ * Styleguide Spacing - Margin - Auto
+ */
 .mha {
   margin-left: auto;
   margin-right: auto;
 }
 
-/** Margin 0: Horizontal */
-.mr0,
-.mh0 {
-  margin-right: 0;
-}
-.mh0 {
-  margin-left: 0;
-}
-
-/** Margin 0: Vertical */
-.mb0,
-.mv0 {
-  margin-bottom: 0;
-}
-.mv0 {
-  margin-top: 0;
-}
-
-/** Margin 1: Horizontal */
-.mr,
-.mh,
-.m1 {
-  margin-right: var(--spacing);
-}
-.mh,
-.m1 {
-  margin-left: var(--spacing);
-}
-
-/** Margin 1: Vertical */
-.mb,
-.mv,
-.m1 {
-  margin-bottom: var(--spacing);
-}
-.mv,
-.m1 {
-  margin-top: var(--spacing);
-}
-
-/** Margin 2: Horizontal */
-.mr2,
-.mh2,
-.m2 {
-  margin-right: calc(2 * var(--spacing));
-}
-.mh2,
-.m2 {
-  margin-left: calc(2 * var(--spacing));
-}
-
-/** Margin 2: Vertical */
-.mb2,
-.mv2,
-.m2 {
-  margin-bottom: calc(2 * var(--spacing));
-}
-.mv2,
-.m2 {
-  margin-top: calc(2 * var(--spacing));
-}
-
-/** Margin 3: Horizontal */
-.mr3,
-.mh3,
-.m3 {
-  margin-right: calc(3 * var(--spacing));
-}
-.mh3,
-.m3 {
-  margin-left: calc(3 * var(--spacing));
-}
-
-/** Margin 3: Vertical */
-.mb3,
-.mv3,
-.m3 {
-  margin-bottom: calc(3 * var(--spacing));
-}
-.mv3,
-.m3 {
-  margin-top: calc(3 * var(--spacing));
-}
-
-/** Padding 0: Horizontal */
+/**
+ * Padding 0
+ *
+ * Markup:
+ * <div class="p0">Padding zero</div>
+ * <div class="pr0">Padding right zero</div>
+ * <div class="pb0">Padding bottom zero</div>
+ * <div class="ph0">Padding horizontal zero</div>
+ * <div class="pv0">Padding vertical zero</div>
+ *
+ * Styleguide Spacing - Padding - 0
+ */
+.p0,
 .pr0,
 .ph0 {
   padding-right: 0;
 }
+.p0,
 .ph0 {
   padding-left: 0;
 }
 
-/** Padding 0: Vertical */
+.p0,
 .pb0,
 .pv0 {
   padding-bottom: 0;
 }
+.p0,
 .pv0 {
   padding-top: 0;
 }
 
-/** Padding 1: Horizontal */
+/**
+ * Padding 1
+ *
+ * Markup:
+ * <div class="p">Padding one</div>
+ * <div class="pr">Padding right one</div>
+ * <div class="pb">Padding bottom one</div>
+ * <div class="ph">Padding horizontal one</div>
+ * <div class="pv">Padding vertical one</div>
+ *
+ * Styleguide Spacing - Padding - 1
+ */
 .pr,
 .ph,
-.p1 {
-  padding-right: var(--spacing);
+.p {
+  padding-right: var(--s);
 }
 .ph,
-.p1 {
-  padding-left: var(--spacing);
+.p {
+  padding-left: var(--s);
 }
 
-/** Padding 1: Vertical */
 .pb,
 .pv,
-.p1 {
-  padding-bottom: var(--spacing);
+.p {
+  padding-bottom: var(--s);
 }
 .pv,
-.p1 {
-  padding-top: var(--spacing);
+.p {
+  padding-top: var(--s);
 }
 
-/** Padding 2: Horizontal */
+/**
+ * Padding 2
+ *
+ * Markup:
+ * <div class="p2">Padding two</div>
+ * <div class="pr2">Padding right two</div>
+ * <div class="pb2">Padding bottom two</div>
+ * <div class="ph2">Padding horizontal two</div>
+ * <div class="pv2">Padding vertical two</div>
+ *
+ * Styleguide Spacing - Padding - 2
+ */
 .pr2,
 .ph2,
 .p2 {
-  padding-right: calc(2 * var(--spacing));
+  padding-right: calc(2 * var(--s));
 }
 .ph2,
 .p2 {
-  padding-left: calc(2 * var(--spacing));
+  padding-left: calc(2 * var(--s));
 }
 
-/** Padding 2: Vertical */
 .pb2,
 .pv2,
 .p2 {
-  padding-bottom: calc(2 * var(--spacing));
+  padding-bottom: calc(2 * var(--s));
 }
 .pv2,
 .p2 {
-  padding-top: calc(2 * var(--spacing));
+  padding-top: calc(2 * var(--s));
 }
 
-/** Padding 3: Horizontal */
+/**
+ * Padding 3
+ *
+ * Markup:
+ * <div class="p3">Padding three</div>
+ * <div class="pr3">Padding right three</div>
+ * <div class="pb3">Padding bottom three</div>
+ * <div class="ph3">Padding horizontal three</div>
+ * <div class="pv3">Padding vertical three</div>
+ *
+ * Styleguide Spacing - Padding - 3
+ */
 .pr3,
 .ph3,
 .p3 {
-  padding-right: calc(3 * var(--spacing));
+  padding-right: calc(3 * var(--s));
 }
 .ph3,
 .p3 {
-  padding-left: calc(3 * var(--spacing));
+  padding-left: calc(3 * var(--s));
 }
 
-/** Padding 3: Vertical */
 .pb3,
 .pv3,
 .p3 {
-  padding-bottom: calc(3 * var(--spacing));
+  padding-bottom: calc(3 * var(--s));
 }
 .pv3,
 .p3 {
-  padding-top: calc(3 * var(--spacing));
+  padding-top: calc(3 * var(--s));
+}
+
+/**
+ * Padding 4
+ *
+ * Markup:
+ * <div class="p4">Padding three</div>
+ * <div class="pr4">Padding right three</div>
+ * <div class="pb4">Padding bottom three</div>
+ * <div class="ph4">Padding horizontal three</div>
+ * <div class="pv4">Padding vertical three</div>
+ *
+ * Styleguide Spacing - Padding - 4
+ */
+.pr4,
+.ph4,
+.p4 {
+  padding-right: calc(4 * var(--s));
+}
+.ph4,
+.p4 {
+  padding-left: calc(4 * var(--s));
+}
+
+.pb4,
+.pv4,
+.p4 {
+  padding-bottom: calc(4 * var(--s));
+}
+.pv4,
+.p4 {
+  padding-top: calc(4 * var(--s));
+}
+
+/**
+ * Padding 5
+ *
+ * Markup:
+ * <div class="p5">Padding three</div>
+ * <div class="pr5">Padding right three</div>
+ * <div class="pb5">Padding bottom three</div>
+ * <div class="ph5">Padding horizontal three</div>
+ * <div class="pv5">Padding vertical three</div>
+ *
+ * Styleguide Spacing - Padding - 5
+ */
+.pr5,
+.ph5,
+.p5 {
+  padding-right: calc(5 * var(--s));
+}
+.ph5,
+.p5 {
+  padding-left: calc(5 * var(--s));
+}
+
+.pb5,
+.pv5,
+.p5 {
+  padding-bottom: calc(5 * var(--s));
+}
+.pv5,
+.p5 {
+  padding-top: calc(5 * var(--s));
+}
+
+/**
+ * Padding 6
+ *
+ * Markup:
+ * <div class="p6">Padding three</div>
+ * <div class="pr6">Padding right three</div>
+ * <div class="pb6">Padding bottom three</div>
+ * <div class="ph6">Padding horizontal three</div>
+ * <div class="pv6">Padding vertical three</div>
+ *
+ * Styleguide Spacing - Padding - 6
+ */
+.pr6,
+.ph6,
+.p6 {
+  padding-right: calc(6 * var(--s));
+}
+.ph6,
+.p6 {
+  padding-left: calc(6 * var(--s));
+}
+
+.pb6,
+.pv6,
+.p6 {
+  padding-bottom: calc(6 * var(--s));
+}
+.pv6,
+.p6 {
+  padding-top: calc(6 * var(--s));
 }

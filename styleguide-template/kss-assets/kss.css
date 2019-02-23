@@ -1,0 +1,60 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+/** Reference number */
+.ref-no {
+  padding-right: .5em;
+}
+
+.sidebar nav > ol > li {
+  display: inline-block;
+}
+.sidebar nav > ol > li > ol {
+  display: none;
+}
+
+@media (min-width: 24em) {
+  main.ph2 {
+    padding-left: calc(3 * var(--s));
+    padding-right: calc(3 * var(--s));
+  }
+}
+@media (min-width: 48em) {
+  body {
+    padding-left: 25%;
+  }
+  .sidebar {
+    border-right: 1px solid var(--g3);
+    height: 100%;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    width: 25%;
+  }
+  .sidebar nav > ol > li {
+    border-top: 1px solid var(--g3);
+    display: block;
+  }
+  .sidebar nav > ol > li > ol {
+    display: block;
+  }
+  .ref-no {
+    padding-right: 0;
+    width: 2.5em;
+  }
+  main {
+    max-width: 48em;
+  }
+}
+@media (min-width: 54em) {
+  body {
+    padding-left: 18em;
+  }
+  .sidebar {
+    width: 18em;
+  }
+}

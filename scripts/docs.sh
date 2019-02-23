@@ -1,10 +1,13 @@
 #!/bin/bash
 set -exo pipefail
 
-node_modules/.bin/kss --css kss-assets/phtn.min.css --destination docs \
-  --homepage ../README.md --source src
+node_modules/.bin/kss --builder=styleguide-template \
+  --css kss-assets/github.css --css kss-assets/phtn-opinions.min.css \
+  --destination docs --extend styleguide-template/extend \
+  --homepage ../README.md --nav-depth 2 --source src --title "phtn docs"
 
-cp dist/phtn.min.css docs/kss-assets/
+cp dist/phtn-opinions.min.css docs/kss-assets/
+cp node_modules/highlight.js/styles/github.css docs/kss-assets/
 
 # TODO: For debugging purposes. Remove it!
 echo "Docs generated:"

@@ -1,63 +1,216 @@
 /**
- * Text color
+ * Text
+ *
+ * Helper classes for `color`, `font-size`, etc.
+ *
+ * Styleguide Text
+ */
+
+/**
+ * Text Alignment
+ *
+ * Markup:
+ * <p class="tal">Left</p>
+ * <p class="tac">Center</p>
+ * <p class="tar">Right</p>
+ * <p class="taj" style="max-width: 160px">Justified justified justified justified justified justified.</p>
+ *
+ * Styleguide Text - Aligment
+ */
+.tal {
+  text-align: left;
+}
+.tac {
+  text-align: center;
+}
+.taj {
+  text-align: justify;
+}
+.tar {
+  text-align: right;
+}
+
+/**
+ * Text Decoration
+ *
+ * Markup:
+ * <p class="td0">None</p>
+ * <p class="tds">line-through</p>
+ * <p class="tdu">underline</p>
+ *
+ * Styleguide Text - Decoration
+ */
+.td0 {
+  text-decoration: none;
+}
+.tdl {
+  text-decoration: line-through;
+}
+.tdu {
+  text-decoration: underline;
+}
+
+/**
+ * White
  *
  * Markup:
  * <p class="ca">Sample text</p>
- * <p class="cb">Sample text</p>
- * <p class="cg">Sample text</p>
- * <p class="cw">Sample text</p>
  *
- * Styleguide Text.color
+ * Styleguide Text - Colors - White
  */
 .ca {
-  color: var(--accent);
+  color: var(--a);
 }
 .cb {
-  color: var(--black);
+  color: var(--b);
 }
 .cg {
-  color: var(--gray);
+  color: var(--g);
 }
 .cw {
-  color: var(--white);
+  color: var(--w);
 }
 
 /**
- * Font size
+ * Font Sizes
+ *
+ * Sizes are based on the [Golden Ratio](https://en.wikipedia.org/wiki/Golden_ratio)
+ * starting at 100% and 81.25%:
+ *
+ * ```
+ * 1.0   (16/24)  0.8125 (13/16)
+ * 1.618 (25/32)  1.315  (21/24)
+ * 2.618 (42/48)  2.127  (34/40)
+ * 4.236 (68/72)  3.442  (55/64)
+ * ```
  *
  * Markup:
- * <p class="f1">Sample text</p>
- * <p class="f2">Sample text</p>
- * <p class="f3">Sample text</p>
- * <p class="f4">Sample text</p>
+ * <div>
+ *   <h1 class="f7 mv">Font Size 7</h1>
+ *   <h1 class="f6 mv">Font Size 6</h1>
+ *   <h2 class="f5 mv">Font Size 5</h2>
+ *   <h3 class="f4 mv">Font Size 4</h3>
+ *   <h4 class="f3 mv">Font Size 3</h4>
+ *   <h5 class="f2 mv">Font Size 2</h5>
+ *   <h6 class="f1 mv">Font Size 1</h6>
+ *   <p class="fs mv">Font Size Small</p>
+ * </div>
+ * 
+ * Styleguide Text - Sizes
+ */
+
+/**
+ * Text Size 1
  *
- * Styleguide Text.size
+ * The default text size.
+ *
+ * Markup:
+ * <h1 class="f1">Sample text</h1>
+ *
+ * Styleguide Text - Sizes - 1
  */
 .f1 {
-  font-size: 1em;
-  line-height: calc(2 * var(--spacing));
-}
-.f2 {
-  font-size: 1.5em;
-  line-height: calc(3 * var(--spacing));
-}
-.f3 {
-  font-size: 2em;
-  line-height: calc(3 * var(--spacing));
-}
-.f4 {
-  font-size: 2.5em;
-  line-height: var(4 * var(--spacing));
+  font-size: 1rem;
+  line-height: calc(3 * var(--s));
 }
 
 /**
- * Font style
+ * Text Size 2
  *
+ * Markup:
+ * <h1 class="f2">Sample text</h1>
+ * 
+ * Styleguide Text - Sizes - 2
+ */
+.f2 {
+  font-size: 1.315rem;
+  line-height: calc(3 * var(--s));
+}
+
+/**
+ * Text Size 3
+ *
+ * Markup:
+ * <h1 class="f3">Sample text</h1>
+ * 
+ * Styleguide Text - Sizes - 3
+ */
+.f3 {
+  font-size: 1.618rem;
+  line-height: calc(4 * var(--s));
+}
+
+/**
+ * Text Size 4
+ *
+ * Markup:
+ * <h1 class="f4">Sample text</h1>
+ * 
+ * Styleguide Text - Sizes - 4
+ */
+.f4 {
+  font-size: 2.127rem;
+  line-height: calc(5 * var(--s));
+}
+
+/**
+ * Text Size 5
+ *
+ * Markup:
+ * <h1 class="f5">Sample text</h1>
+ * 
+ * Styleguide Text - Sizes - 5
+ */
+.f5 {
+  font-size: 2.618rem;
+  line-height: calc(6 * var(--s));
+}
+
+/**
+ * Text Size 6
+ *
+ * Markup:
+ * <h1 class="f6">Sample text</h1>
+ * 
+ * Styleguide Text - Sizes - 6
+ */
+.f6 {
+  font-size: 3.442rem;
+  line-height: calc(8 * var(--s));
+}
+
+/**
+ * Text Size 7
+ *
+ * Markup:
+ * <h1 class="f7">Sample text</h1>
+ * 
+ * Styleguide Text - Sizes - 7
+ */
+.f7 {
+  font-size: 4.236rem;
+  line-height: calc(9 * var(--s));
+}
+
+/**
+ * Font Size Small
+ *
+ * Markup:
+ * <p class="fs">Sample text<p>
+ *
+ * Styleguide Text - Sizes - Small
+ */
+.fs {
+  font-size: 0.8125rem;
+  line-height: calc(2 * var(--s));
+}
+
+/**
  * Markup:
  * <p class="fsn">Sample text</p>
  * <p class="fsi">Sample text</p>
  *
- * Styleguide: Text.style
+ * Styleguide Text - Style
  */
 .fsn {
   font-style: normal;
@@ -67,20 +220,24 @@
 }
 
 /**
- * Font weight
+ * Text Weight
+ *
+ * Adjust the `font-weight`:
  *
  * Markup:
- * <p class="fw1">Sample text</p>
- * <p class="fw2">Sample text</p>
- * <p class="fw3">Sample text</p>
- * <p class="fw4">Sample text</p>
- * <p class="fw5">Sample text</p>
- * <p class="fw6">Sample text</p>
- * <p class="fw7">Sample text</p>
- * <p class="fw8">Sample text</p>
- * <p class="fw9">Sample text</p>
+ * <div style="font-family: 'Avenir Next', 'Helvetica Neue', sans-serif">
+ *   <p class="fw1">100</p>
+ *   <p class="fw2">200</p>
+ *   <p class="fw3">300</p>
+ *   <p class="fw4">400</p>
+ *   <p class="fw5">500</p>
+ *   <p class="fw6">600</p>
+ *   <p class="fw7">700</p>
+ *   <p class="fw8">800</p>
+ *   <p class="fw9">900</p>
+ * </div>
  *
- * Styleguide: Text.weight
+ * Styleguide Text - Weight
  */
 .fw1 {
   font-weight: 100;
@@ -110,44 +267,4 @@
 }
 .fw9 {
   font-weight: 900;
-}
-
-/**
- * Text alignment
- *
- * Markup:
- * <p class="tal">Sample text</p>
- * <p class="tac">Sample text</p>
- * <p class="tar">Sample text</p>
- * <p class="taj">Sample text</p>
- *
- * Styleguide: Text.align
- */
-.tal {
-  text-align: left;
-}
-.tac {
-  text-align: center;
-}
-.taj {
-  text-align: justify;
-}
-.tar {
-  text-align: right;
-}
-
-/**
- * Text decoration
- *
- * Markup:
- * <p class="td0">Sample text</p>
- * <p> class="tdu">Sample text</p>
- *
- * Styleguide: Text.decoration
- */
-.tu0 {
-  text-decoration: none;
-}
-.tu {
-  text-decoration: underline;
 }
